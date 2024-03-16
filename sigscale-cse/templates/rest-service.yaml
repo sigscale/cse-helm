@@ -1,0 +1,17 @@
+## SigScale CSE REST Service
+##
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}-cse-rest
+  labels:
+    {{- include "sigscale-cse.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "sigscale-cse.selectorLabels" . | nindent 6 }}
+  type: {{ .Values.restService.type }}
+  ports:
+  - protocol: TCP
+    appProtocol: http
+    port: {{ .Values.restService.port }}
+    targetPort: rest

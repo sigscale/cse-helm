@@ -1,0 +1,14 @@
+##
+## Erlang/OTP Cluster Headless Service
+##
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Release.Name }}-otp-cse
+  labels:
+    {{- include "sigscale-cse.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "sigscale-cse.selectorLabels" . | nindent 6 }}
+  type: ClusterIP
+  clusterIP: None
