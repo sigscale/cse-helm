@@ -1,8 +1,17 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.0.2
+version: 1.0.3
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
+keywords:
+  - 3gpp
+  - cse
+  - scf
+  - scp
+  - camel
+  - inap
+  - 5g
+  - cnf
 home: https://sigscale.com/solutions
 sources:
   - https://github.com/sigscale/cse
@@ -11,4 +20,4 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.6.12-2"
+appVersion: "1.6.13-1"
