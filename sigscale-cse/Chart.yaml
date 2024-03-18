@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.0.4
+version: 1.0.5
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -20,4 +20,4 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.6.14-1"
+appVersion: "1.6.15-1"
