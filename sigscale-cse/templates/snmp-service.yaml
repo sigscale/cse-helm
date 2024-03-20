@@ -12,6 +12,9 @@ spec:
   ports:
   - protocol: UDP
     appProtocol: snmp
+    {{- if .Values.snmpService.clusterIP }}
+    clusterIP: {{ .Values.snmpService.clusterIP }}
+    {{- end }}
     port: {{ .Values.snmpService.port }}
     targetPort: snmp
 {{- end }}

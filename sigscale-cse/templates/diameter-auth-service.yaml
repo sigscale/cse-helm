@@ -12,6 +12,9 @@ spec:
   ports:
   - protocol: TCP
     appProtocol: diameter
+    {{- if .Values.diameterAuthService.clusterIP }}
+    clusterIP: {{ .Values.diameterAuthService.clusterIP }}
+    {{- end }}
     port: {{ .Values.diameterAuthService.port }}
     targetPort: diameter-auth
 {{- end }}

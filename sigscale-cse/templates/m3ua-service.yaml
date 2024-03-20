@@ -12,6 +12,9 @@ spec:
   ports:
   - protocol: {{ .Values.m3uaService.protocol }}
     appProtocol: m3ua
+    {{- if .Values.m3uaService.clusterIP }}
+    clusterIP: {{ .Values.m3uaService.clusterIP }}
+    {{- end }}
     port: {{ .Values.m3uaService.port }}
     targetPort: m3ua
 {{- end }}
