@@ -98,22 +98,23 @@ spec:
           containerPort: 8080
         {{- if .Values.m3uaService.create }}
         - name: m3ua
-          protocol: {{- with .Values.m3uaService.protocol }}
-          containerPort: {{- with .Values.m3uaService.port }}
+          protocol: {{ .Values.m3uaService.protocol }}
+          containerPort: {{ .Values.m3uaService.port }}
         {{- end }}
         {{- if .Values.diameterAcctService.create }}
         - name: diameter-acct
-          protocol: {{- with .Values.diameterAcctService.protocol }}
-          containerPort: {{- with .Values.diameterAcctService.port }}
+          protocol: {{ .Values.diameterAcctService.protocol }}
+          containerPort: {{ .Values.diameterAcctService.port }}
         {{- end }}
         {{- if .Values.diameterAuthService.create }}
         - name: diameter-auth
-          protocol: {{- with .Values.diameterAuthService.protocol }}
-          containerPort: {{- with .Values.diameterAuthService.port }}
+          protocol: {{ .Values.diameterAuthService.protocol }}
+          containerPort: {{ .Values.diameterAuthService.port }}
         {{- end }}
+        {{- if .Values.snmpService.create }}
         - name: snmp
-          protocol: {{- with .Values.snmpService.protocol }}
-          containerPort: {{- with .Values.snmpService.port }}
+          protocol: UDP
+          containerPort: {{ .Values.snmpService.port }}
         {{- end }}
         volumeMounts:
         - name: cse-data
