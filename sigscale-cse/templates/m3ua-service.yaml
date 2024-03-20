@@ -1,4 +1,4 @@
-{{- if .Values.diameterAcctService.create -}}
+{{- if .Values.m3uaService.create -}}
 kind: Service
 apiVersion: v1
 metadata:
@@ -8,10 +8,10 @@ metadata:
 spec:
   selector:
     {{- include "sigscale-cse.selectorLabels" . | nindent 6 }}
-  type: {{ .Values.diameterAcctService.type }}
+  type: {{ .Values.m3uaService.type }}
   ports:
-  - protocol: TCP
-    appProtocol: diameter
-    port: {{ .Values.diameterAcctService.port }}
-    targetPort: diameter-acct
+  - protocol: {{ .Values.m3uaService.protocol }}
+    appProtocol: m3ua
+    port: {{ .Values.m3uaService.port }}
+    targetPort: m3ua
 {{- end }}

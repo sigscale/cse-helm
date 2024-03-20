@@ -93,18 +93,28 @@ spec:
         - name: erl-rpc
           protocol: TCP
           containerPort: 54861
-        - name: diameter-acct
-          protocol: TCP
-          containerPort: 3868
-        - name: diameter-auth
-          protocol: TCP
-          containerPort: 3869
         - name: rest
           protocol: TCP
           containerPort: 8080
+        {{- if .Values.m3uaService.create }}
+        - name: m3ua
+          protocol: {{- with .Values.m3uaService.protocol }}
+          containerPort: {{- with .Values.m3uaService.port }}
+        {{- end }}
+        {{- if .Values.diameterAcctService.create }}
+        - name: diameter-acct
+          protocol: {{- with .Values.diameterAcctService.protocol }}
+          containerPort: {{- with .Values.diameterAcctService.port }}
+        {{- end }}
+        {{- if .Values.diameterAuthService.create }}
+        - name: diameter-auth
+          protocol: {{- with .Values.diameterAuthService.protocol }}
+          containerPort: {{- with .Values.diameterAuthService.port }}
+        {{- end }}
         - name: snmp
-          protocol: UDP
-          containerPort: 4161
+          protocol: {{- with .Values.snmpService.protocol }}
+          containerPort: {{- with .Values.snmpService.port }}
+        {{- end }}
         volumeMounts:
         - name: cse-data
           mountPath: /home/otp/db

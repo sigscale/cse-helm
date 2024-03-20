@@ -17,14 +17,25 @@ podAnnotations: {}
 podLabels: {}
 restService:
   type: LoadBalancer
+  protocol: TCP
   port: 80
-diameterAcctService:
+m3uaService:
+  create: false
   type: ClusterIP
+  protocol: SCTP
+  port: 2905
+diameterAcctService:
+  create: false
+  type: ClusterIP
+  protocol: TCP
   port: 3868
 diameterAuthService:
+  create: false
   type: ClusterIP
+  protocol: TCP
   port: 3869
 snmpService:
+  create: false
   type: ClusterIP
   port: 4161
 resources: {}

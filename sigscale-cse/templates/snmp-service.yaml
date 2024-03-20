@@ -1,5 +1,4 @@
-## SigScale CSE SNMP Service
-##
+{{- if .Values.snmpService.create -}}
 kind: Service
 apiVersion: v1
 metadata:
@@ -15,3 +14,4 @@ spec:
     appProtocol: snmp
     port: {{ .Values.snmpService.port }}
     targetPort: snmp
+{{- end }}

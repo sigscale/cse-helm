@@ -1,5 +1,4 @@
-## SigScale CSE DIAMETER Authentication Service
-##
+{{- if .Values.diameterAuthService.create -}}
 kind: Service
 apiVersion: v1
 metadata:
@@ -15,3 +14,4 @@ spec:
     appProtocol: diameter
     port: {{ .Values.diameterAuthService.port }}
     targetPort: diameter-auth
+{{- end }}
