@@ -72,7 +72,7 @@ spec:
           protocol: TCP
           containerPort: 54861
         resources:
-          {{- toYaml .Values.resources | nindent 12 }}
+          {{- toYaml .Values.podResources | nindent 12 }}
         volumeMounts:
         - name: cse-data
           mountPath: /home/otp/db
@@ -153,7 +153,7 @@ spec:
           periodSeconds: 10
           failureThreshold: 6
         resources:
-          {{- toYaml .Values.resources | nindent 12 }}
+          {{- toYaml .Values.Podesources | nindent 12 }}
       {{- if .Values.cseConfig.create }}
       volumes:
       - name: cse-config
@@ -182,11 +182,17 @@ spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: {{ .Values.dataStorage }}
+          storage: {{ .Values.dataVolume.size }}
+      {{- with .Values.dataVolume.class }}
+      storageClassName: {{ .Values.dataVolume.class }}
+      {{- end }}
   - metadata:
       name: cse-log
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: {{ .Values.logsStorage }}
+          storage: {{ .Values.logsVolume.size }}
+      {{- with .Values.logsVolume.class }}
+      storageClassName: {{ .Values.logsVolume.class }}
+      {{- end }}

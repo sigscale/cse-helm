@@ -10,7 +10,7 @@ spec:
     {{- include "sigscale-cse.selectorLabels" . | nindent 6 }}
   type: {{ .Values.diameterAuthService.type }}
   ports:
-  - protocol: TCP
+  - protocol: {{ .Values.diameterAuthService.protocol }}
     appProtocol: diameter
     {{- if .Values.diameterAuthService.clusterIP }}
     clusterIP: {{ .Values.diameterAuthService.clusterIP }}
