@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.2.2
+version: 1.2.3
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -20,17 +20,15 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.6.17-5"
+appVersion: "1.6.20-1"
 annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
-    - kind: fixed
-      description: image annotation
-    - kind: added
-      description: Signed chart package
+    - kind: changed
+      description: allow unauthenticated health check (GET /health)
   artifacthub.io/images: |
     - name: cse
-      image: sigscale/cse:1.6.17-5
+      image: sigscale/cse:1.6.20-1
       platforms:
         - linux/amd64
   artifacthub.io/license: Apache-2.0
