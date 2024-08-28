@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.2.7
+version: 1.2.8
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -25,9 +25,7 @@ annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
     - kind: fixed
-      description: typo in log mount path
-    - kind: added
-      description: call release on nrf api failure in camel slp
+      description: mount log before initialization
   artifacthub.io/images: |
     - name: cse
       image: sigscale/cse:1.7.1-1
