@@ -133,7 +133,7 @@ spec:
         - name: cse-data
           mountPath: /home/otp/db
         - name: cse-log
-          mountPath: /home/otp/logs
+          mountPath: /home/otp/log
         {{- if .Values.cseConfig.create }}
         - name: cse-config
           mountPath: /home/otp/config
