@@ -77,6 +77,8 @@ spec:
         - name: cse-data
           mountPath: /home/otp/db
         {{- if .Values.cseConfig.create }}
+        - name: cse-log
+          mountPath: /home/otp/log
         - name: cse-config
           mountPath: /home/otp/config
           readOnly: true
