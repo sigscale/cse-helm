@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.2.11
+version: 1.2.12
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -20,17 +20,15 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.7.3-1"
+appVersion: "1.7.6-1"
 annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
-    - kind: changed
-      description: diameter client test scripts enhancements
-    - kind: changed
-      description: update dependencies
+    - kind: fixed
+      description: nrf operation error handling with problem details cause
   artifacthub.io/images: |
     - name: cse
-      image: sigscale/cse:1.7.3-1
+      image: sigscale/cse:1.7.6-1
       platforms:
         - linux/amd64
   artifacthub.io/license: Apache-2.0
