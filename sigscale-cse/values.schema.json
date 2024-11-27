@@ -16,8 +16,8 @@
 				"tag": {
 					"description": "Image manifest identifier",
 					"type": "string",
-					"pattern": "^([0-9][A-Z][a-z]._-)*$",
-					"default": ""
+					"pattern": "^([0-9][A-Z][a-z]._-)*$|latest",
+					"default": "latest"
 				},
 				"pullPolicy": {
 					"description": "When to pull (download) the image",
