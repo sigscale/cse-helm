@@ -25,7 +25,7 @@ annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
     - kind: added
-      description: default image tag: latest
+      description: "default image tag: latest"
   artifacthub.io/images: |
     - name: cse
       image: sigscale/cse:1.7.15-1
