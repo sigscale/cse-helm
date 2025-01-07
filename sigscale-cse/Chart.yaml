@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.2.14
+version: 1.3.0
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -20,15 +20,17 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.7.15-1"
+appVersion: "1.8.0-1"
 annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
     - kind: added
-      description: "default image tag: latest"
+      description: "global title translation"
+    - kind: changed
+      description: "sccp party address record"
   artifacthub.io/images: |
     - name: cse
-      image: sigscale/cse:1.7.15-1
+      image: sigscale/cse:1.8.0-1
       platforms:
         - linux/amd64
   artifacthub.io/license: Apache-2.0
