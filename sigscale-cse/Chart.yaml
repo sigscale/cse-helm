@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.4.1
+version: 1.4.2
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -22,15 +22,15 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.9.1-1"
+appVersion: "1.9.2-1"
 annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
     - kind: added
-      description: "radius prepaid service logic processing (slp)"
+      description: "vlr number in sms/mms nrf service information"
   artifacthub.io/images: |
     - name: cse
-      image: sigscale/cse:1.9.1-1
+      image: sigscale/cse:1.9.2-1
       platforms:
         - linux/amd64
   artifacthub.io/license: Apache-2.0
