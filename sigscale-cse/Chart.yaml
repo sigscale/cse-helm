@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.4.5
+version: 1.4.6
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -22,17 +22,15 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.9.5-1"
+appVersion: "1.9.6-1"
 annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
-    - kind: added
-      description: "configurable idle timeout for slpi garbage collection"
-    - kind: added
-      description: "logging for radius, cap and inap slps"
+    - kind: fixed
+      description: "isup cause code location in codec"
   artifacthub.io/images: |
     - name: cse
-      image: sigscale/cse:1.9.5-1
+      image: sigscale/cse:1.9.6-1
       platforms:
         - linux/amd64
   artifacthub.io/license: Apache-2.0
