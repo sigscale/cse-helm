@@ -2,7 +2,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: {{ .Release.Name }}-diameter-acct
+  name: {{ .Release.Name }}-m3ua
   labels:
     {{- include "sigscale-cse.labels" . | nindent 4 }}
 spec:
