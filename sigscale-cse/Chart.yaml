@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.4.7
+version: 1.4.8
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -27,7 +27,7 @@ annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
     - kind: fixed
-      description: "postpone additional camel invokes pending nrf response"
+      description: "correct m3ua service name metadata"
   artifacthub.io/images: |
     - name: cse
       image: sigscale/cse:1.9.7-1
