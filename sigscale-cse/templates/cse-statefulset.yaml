@@ -76,9 +76,9 @@ spec:
         volumeMounts:
         - name: cse-data
           mountPath: /home/otp/db
-        {{- if .Values.cseConfig.create }}
         - name: cse-log
           mountPath: /home/otp/log
+        {{- if .Values.cseConfig.create }}
         - name: cse-config
           mountPath: /home/otp/config
           readOnly: true
