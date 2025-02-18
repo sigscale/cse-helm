@@ -28,7 +28,7 @@
 						"Always",
 						"Never"
 					],
-					"default": "IfNotPresent"
+					"default": "Always"
 				}
 			}
 		},
