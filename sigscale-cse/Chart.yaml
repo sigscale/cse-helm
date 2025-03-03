@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.4.12
+version: 1.4.13
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -22,17 +22,15 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.9.10-1"
+appVersion: "1.9.11-1"
 annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
-    - kind: changed
-      description: "camel abandon/disconnect/exception release handling"
-    - kind: changed
-      description: "default image pull policy"
+    - kind: fixed
+      description: "camel edp interrupt response handling"
   artifacthub.io/images: |
     - name: cse
-      image: sigscale/cse:1.9.10-1
+      image: sigscale/cse:1.9.11-1
       platforms:
         - linux/amd64
   artifacthub.io/license: Apache-2.0
