@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.4.17
+version: 1.4.18
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -22,19 +22,15 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.9.22-1"
+appVersion: "1.9.24-1"
 annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
     - kind: added
-      description: "final-unit-indication (fui) handling"
-    - kind: added
-      description: "enable discovery with well known (rfc8615) api catalog (rfc9727)"
-    - kind: added
-      description: "gmsc address and imei in nrf service rating from cap slp"
+      description: "services for radius auth and acct"
   artifacthub.io/images: |
     - name: cse
-      image: sigscale/cse:1.9.22-1
+      image: sigscale/cse:1.9.24-1
       platforms:
         - linux/amd64
   artifacthub.io/license: Apache-2.0
