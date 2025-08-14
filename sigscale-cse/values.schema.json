@@ -257,6 +257,84 @@
 				"port"
 			]
 		},
+		"radiusAuthService": {
+			"description": "RADIUS authentication/authorization service",
+			"type": "object",
+			"properties": {
+				"create": {
+					"description": "If service will be started",
+					"type": "boolean",
+					"default": false
+				},
+				"type": {
+					"description": "Service type used to expose an external IP address.",
+					"type": "string",
+					"enum": [
+						"ClusterIP",
+						"NodePort",
+						"LoadBalancer",
+						"ExternalName"
+					],
+					"default": "ClusterIP"
+				},
+				"clusterIP": {
+					"description": "IP address of the service.",
+					"type": "string",
+					"default": ""
+				},
+				"port": {
+					"description": "IP port address of the service.",
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 65535,
+					"default": 1812
+				}
+			},
+			"required": [
+				"create",
+				"type",
+				"port"
+			]
+		},
+		"radiusAcctService": {
+			"description": "RADIUS accounting service",
+			"type": "object",
+			"properties": {
+				"create": {
+					"description": "If service will be started",
+					"type": "boolean",
+					"default": false
+				},
+				"type": {
+					"description": "Service type used to expose an external IP address.",
+					"type": "string",
+					"enum": [
+						"ClusterIP",
+						"NodePort",
+						"LoadBalancer",
+						"ExternalName"
+					],
+					"default": "ClusterIP"
+				},
+				"clusterIP": {
+					"description": "IP address of the service.",
+					"type": "string",
+					"default": ""
+				},
+				"port": {
+					"description": "IP port address of the service.",
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 65535,
+					"default": 1813
+				}
+			},
+			"required": [
+				"create",
+				"type",
+				"port"
+			]
+		},
 		"snmpService": {
 			"description": "SNMP monitoring service",
 			"type": "object",

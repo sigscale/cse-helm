@@ -126,6 +126,16 @@ spec:
           protocol: {{ .Values.diameterAuthService.protocol }}
           containerPort: {{ .Values.diameterAuthService.port }}
         {{- end }}
+        {{- if .Values.radiusAuthService.create }}
+        - name: radius-auth
+          protocol: {{ .Values.radiusAuthService.protocol }}
+          containerPort: {{ .Values.radiusAuthService.port }}
+        {{- end }}
+        {{- if .Values.radiusAcctService.create }}
+        - name: radius-acct
+          protocol: {{ .Values.radiusAcctService.protocol }}
+          containerPort: {{ .Values.radiusAcctService.port }}
+        {{- end }}
         {{- if .Values.snmpService.create }}
         - name: snmp
           protocol: UDP
