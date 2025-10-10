@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.4.20
+version: 1.4.21
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -22,17 +22,17 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.9.27-1"
+appVersion: "1.9.28-1"
 annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
+    - kind: added
+      description: "http load balancing and resilience for re interface (nrf)"
     - kind: fixed
-      description: "correct handling of relation location in nrf respose"
-    - kind: fixed
-      description: "correct sms/mms iec: rsu (not usu) in nrf request"
+      description: "joining a node to a cluster (scaling) was missing two (new) tables"
   artifacthub.io/images: |
     - name: cse
-      image: sigscale/cse:1.9.27-1
+      image: sigscale/cse:1.9.28-1
       platforms:
         - linux/amd64
   artifacthub.io/license: Apache-2.0
