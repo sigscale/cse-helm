@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sigscale-cse
-version: 1.4.21
+version: 1.4.22
 description: "SigScale CSE (CAMEL Service Environment)"
 type: application
 keywords:
@@ -22,17 +22,17 @@ maintainers: # (optional)
     email: issues@sigscale.com
     url: https://sigscale.org/contact
 icon: https://sigscale.org/esm-bundled/images/manifest/icon-96x96.png
-appVersion: "1.9.28-1"
+appVersion: "1.9.29-1"
 annotations:
   artifacthub.io/category: networking
   artifacthub.io/changes: |
-    - kind: added
-      description: "http load balancing and resilience for re interface (nrf)"
     - kind: fixed
-      description: "joining a node to a cluster (scaling) was missing two (new) tables"
+      description: "improved calling/called party parsing as tel/sip uri"
+    - kind: changed
+      description: "use calling/called party from initial service request only"
   artifacthub.io/images: |
     - name: cse
-      image: sigscale/cse:1.9.28-1
+      image: sigscale/cse:1.9.29-1
       platforms:
         - linux/amd64
   artifacthub.io/license: Apache-2.0
